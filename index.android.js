@@ -13,41 +13,14 @@ import {
   View
 } from 'react-native';
 
-import Dimensions from 'Dimensions';
-const width=Dimensions.get('window').width;
-const height=Dimensions.get('window').height;
+var { SimpleAlertExampleBlock } = require('./src/AlertExample');
 
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <WebView
-          style={{height:height,width:width}}
-          // source={{uri:'https://stage3.ipsy.com/?stagepass=glamination'}}
-          source={{uri:'https://www.ipsy.com'}}
-        ></WebView>
-      </View>
+      <SimpleAlertExampleBlock />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
